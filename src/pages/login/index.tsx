@@ -3,6 +3,8 @@ import { Input } from "../../components/input";
 import { useState } from "react";
 import type { SubmitEvent } from "react";
 
+import { auth } from '../../services/firebaseConnection'
+
 export function Login(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
