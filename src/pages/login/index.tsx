@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Input } from "../../components/input";
+import { Input } from "../../components/Input";
 import { useState } from "react";
 import type { SubmitEvent } from "react";
 
@@ -54,7 +54,7 @@ export function Login(){
 
                 <button
                 type="submit"
-                className="h-9 bg-blue-600 rounded border-0 text-lg font-medium text-white ">
+                className="h-9 bg-blue-600 rounded border-0 text-lg font-medium text-white cursor-pointer">
                     Acessar
                 </button>
             </form>
