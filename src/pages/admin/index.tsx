@@ -86,7 +86,7 @@ export function Admin(){
         const docRef = doc(db, "links", id)
         await deleteDoc(docRef)
     }
-
+ 
     return(
         <div className="flex items-center flex-col min-h-screen pb-7 px-2"> 
             <Header/>

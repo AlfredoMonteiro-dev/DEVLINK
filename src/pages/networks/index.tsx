@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Header } from "../../components/Header" 
 import { Input } from "../../components/Input"
 import type { SubmitEvent } from "react";
@@ -13,6 +13,21 @@ import {
 export function Networks(){
     const [ linkedin, setLinkedin] = useState("")
     const [ github, setGitHub] = useState("")
+
+    useEffect(() => {
+        function loadLinks(){
+            const docRef = doc(db, "social", "link")
+            getDoc(docRef)
+            .then((snapshot) => {
+                if(snapshot.data() !== undefined){
+                    setLinkedin(snapshot.data()?.linkedin)
+                    setGitHub(snapshot.data()?.github)
+                }
+            })
+        }
+
+        loadLinks()
+    }, [])
 
     function handleRegister(e: SubmitEvent){
         e.preventDefault();
