@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Header } from "../../components/Header" 
-import { Input } from "../../components/Input"
+import { Input } from "../../components/InputTemp"
 import type { SubmitEvent } from "react";
 
 import { db } from "../../services/firebaseConnection";

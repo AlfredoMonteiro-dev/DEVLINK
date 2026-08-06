@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Input } from "../../components/Input";
+import { Input } from "../../components/InputTemp";
 import { useState } from "react";
 import type { SubmitEvent } from "react";
 
